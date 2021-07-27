@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyRecipeApp</string>
+    <string name="loading">Loading</string>
+    <string name="there_must_be_a_network_issue_please_check_your_internet_connection">No internet connection.</string>
+    <string name="no_recipes">No recipes.</string>
+    <string name="search">Search</string>
+</resources>
