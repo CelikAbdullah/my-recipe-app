@@ -8,6 +8,7 @@ This is an Android app project to showcase concepts like
 - getting data from a server via Retrofit
 - DataBinding
 - Flow
+- LiveData
 
 I get the data from https://food2fork.ca/ . 
 
