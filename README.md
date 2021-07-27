@@ -10,6 +10,7 @@ This is an Android app project to showcase concepts like
 I get the data from https://food2fork.ca/ . 
 
 ## DEMO:
+![alt-text](link)
 
 
 ## TODO: 
