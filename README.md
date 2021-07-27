@@ -6,6 +6,8 @@ This is an Android app project to showcase concepts like
 - Paging Library 3 
 - caching data via Android Room
 - getting data from a server via Retrofit
+- DataBinding
+- Flow
 
 I get the data from https://food2fork.ca/ . 
 
