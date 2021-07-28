@@ -13,8 +13,5 @@ This is an Android app project to showcase concepts like
 I get the data from https://food2fork.ca/ . 
 
 ### DEMO:
-![alt-text](https://github.com/CelikAbdullah/my-recipe-app/blob/main/recipe_demo.gif)
+![alt-text](https://github.com/CelikAbdullah/my-recipe-app/blob/main/recipe_app_demo.gif)
 
-
-### TODO: 
-Next, I plan to add a detailed view to show each recipe in a more detailed fashion (like adding ingredients, etc.)
