@@ -40,10 +40,11 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/profile_image"
+                    android:id="@+id/recipe_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
+                    android:onClick="@{()-> viewModel.recipeClicked(recipe.recipePk)}"
                     app:imageToImageView="@{recipe.recipeImageUrl}"
                     app:requestManager="@{requestManager}"
                     tools:ignore="ContentDescription"

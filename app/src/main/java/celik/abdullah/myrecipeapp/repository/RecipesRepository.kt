@@ -21,4 +21,7 @@ class RecipesRepository @Inject constructor(private val recipesApi: RecipesApi,
             remoteMediator = SearchRecipesRemoteMediator(recipesApi, myRecipeDatabase, query),
             pagingSourceFactory = {myRecipeDatabase.recipesDao().queryRecipes("%${query.replace(' ', '%')}%")}
         ).flow
+
+    override suspend fun getRecipeById(id: Long): Recipe =
+        myRecipeDatabase.recipesDao().queryRecipeById(id)
 }

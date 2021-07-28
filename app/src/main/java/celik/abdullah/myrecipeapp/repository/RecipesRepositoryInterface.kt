@@ -6,4 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface RecipesRepositoryInterface {
     fun searchRecipes(query:String): Flow<PagingData<Recipe>>
+    suspend fun getRecipeById(id:Long): Recipe
 }

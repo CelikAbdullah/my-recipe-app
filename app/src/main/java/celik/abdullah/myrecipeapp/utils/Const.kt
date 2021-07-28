@@ -13,5 +13,4 @@ object Const {
         override fun areItemsTheSame(oldItem: Recipe, newItem: Recipe): Boolean = oldItem.recipePk == newItem.recipePk
         override fun areContentsTheSame(oldItem: Recipe, newItem: Recipe): Boolean = oldItem == newItem
     }
-
 }

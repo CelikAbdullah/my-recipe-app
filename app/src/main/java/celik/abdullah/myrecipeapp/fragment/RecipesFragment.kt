@@ -5,14 +5,18 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import celik.abdullah.myrecipeapp.R
 import celik.abdullah.myrecipeapp.adapter.RecipesAdapter
 import celik.abdullah.myrecipeapp.adapter.RecipesLoadStateAdapter
 import celik.abdullah.myrecipeapp.databinding.FragmentRecipesBinding
 import celik.abdullah.myrecipeapp.viewmodel.RecipesFragmentViewModel
+import celik.abdullah.myrecipeapp.viewmodel.SharedViewModel
+import celik.abdullah.speeching.utils.EventObserver
 import com.bumptech.glide.RequestManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.distinctUntilChangedBy
@@ -28,9 +32,11 @@ class RecipesFragment : Fragment() {
     private lateinit var binding : FragmentRecipesBinding
     private val recipesFragmentViewModel by viewModels<RecipesFragmentViewModel>()
     private lateinit var searchView: SearchView
+    private val sharedViewModel by activityViewModels<SharedViewModel>()
 
     private lateinit var recipesAdapter: RecipesAdapter
     private val footerAdapter: RecipesLoadStateAdapter = RecipesLoadStateAdapter()
+    private val navController by lazy{findNavController()}
 
     @Inject
     lateinit var rm: RequestManager
@@ -53,6 +59,14 @@ class RecipesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initAdapter()
         setupScrolling()
+        setupObservers()
+    }
+
+    private fun setupObservers() {
+        recipesFragmentViewModel.recipeClickedEvent.observe(viewLifecycleOwner, EventObserver{ recipeId ->
+            sharedViewModel.currentRecipe(recipeId)
+            navController.navigate(RecipesFragmentDirections.actionRecipesFragmentToRecipeFragment())
+        })
     }
 
 

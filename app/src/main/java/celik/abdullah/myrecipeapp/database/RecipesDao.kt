@@ -15,6 +15,9 @@ interface RecipesDao {
     @Query("SELECT * FROM recipes WHERE recipe_title LIKE :query ORDER BY recipe_title ASC")
     fun queryRecipes(query:String): PagingSource<Int, Recipe>
 
+    @Query("SELECT * FROM recipes WHERE recipe_pk=:id")
+    suspend fun queryRecipeById(id:Long): Recipe
+
     @Query("DELETE FROM recipes")
     suspend fun clearRecipes()
 }

@@ -19,5 +19,8 @@ data class Recipe(
     val recipeImageUrl: String,
     @ColumnInfo(name = "recipe_rating")
     @field:SerializedName("rating")
-    val recipeRating: Long
+    val recipeRating: Long,
+    @ColumnInfo(name="recipe_ingredients")
+    @field:SerializedName("ingredients")
+    val recipeIngredients: ArrayList<String>
 )

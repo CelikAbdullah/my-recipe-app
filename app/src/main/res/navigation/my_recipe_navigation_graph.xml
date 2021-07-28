@@ -9,5 +9,13 @@
         android:id="@+id/recipesFragment"
         android:name="celik.abdullah.myrecipeapp.fragment.RecipesFragment"
         tools:layout="@layout/fragment_recipes"
-        android:label="Recipes"/>
+        android:label="Recipes">
+        <action
+            android:id="@+id/action_recipesFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="celik.abdullah.myrecipeapp.fragment.RecipeFragment"
+        tools:layout="@layout/fragment_recipe"/>
 </navigation>
