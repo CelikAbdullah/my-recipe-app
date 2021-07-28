@@ -2,6 +2,7 @@
 
 This is an Android app project to showcase concepts like
 - MVVM pattern; Fragment -> ViewModel -> Repository -> Room or Retrofit
+- Android Jetpack Navigation for navigation between Fragments
 - Dependency Injection via Hilt 
 - Paging Library 3 
 - caching data via Android Room
