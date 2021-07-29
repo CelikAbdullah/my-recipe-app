@@ -17,7 +17,6 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/user_on_billboard_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="8dp"
