@@ -13,6 +13,6 @@ This is an Android app project to showcase the following concepts:
 
 I get the data from https://food2fork.ca/ . 
 
-### DEMO:
+#### DEMO
 ![alt-text](https://github.com/CelikAbdullah/my-recipe-app/blob/main/recipe_app_demo.gif)
 
